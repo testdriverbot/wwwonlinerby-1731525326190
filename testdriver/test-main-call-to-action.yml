@@ -1,0 +1,20 @@
+version: 4.1.16
+steps:
+  - prompt: Identify the main call to action button or link on the page.
+    commands:
+      - command: hover-text
+        text: Принять все cookie
+        description: accept all cookies button
+        action: click
+  - prompt: Click the main call to action.
+    commands:
+      - command: hover-text
+        text: Каталог
+        description: catalog button in the header
+        action: click
+  - prompt: >-
+      Assert that the corresponding action or page transition occurs without
+      errors.  # Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: the page displays the "Каталог" header
