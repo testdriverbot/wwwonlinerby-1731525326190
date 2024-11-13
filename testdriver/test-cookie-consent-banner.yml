@@ -1,0 +1,16 @@
+version: 4.1.16
+steps:
+  - prompt: >-
+      Assert that the cookie consent banner is displayed at the bottom of the
+      page.
+    commands:
+      - command: assert
+        expect: the cookie consent banner is displayed at the bottom of the page
+  - prompt: >-
+      Click on "Принять все cookie"  # Use the content of the file from the
+      environment
+    commands:
+      - command: hover-text
+        text: Принять все cookie
+        description: accept all cookies button
+        action: click
