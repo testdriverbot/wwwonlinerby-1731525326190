@@ -1,0 +1,12 @@
+version: 4.1.16
+steps:
+  - prompt: Assert that the webpage loads successfully.
+    commands:
+      - command: assert
+        expect: the "onliner" logo is visible
+  - prompt: >-
+      Assert that the logo is visible on the page.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: the "onliner" logo is visible
